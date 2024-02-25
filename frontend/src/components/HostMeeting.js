@@ -66,7 +66,7 @@ const HostMeeting = () => {
 
     const saveMeetingToDatabase = async (interviewerEmail, intervieweeEmail, meetingLink) => {
         try {
-            await axios.post("http://127.0.0.1:8000/api/meeting/create-meeting", {
+            await axios.post("https://interview-map.vercel.app/api/meeting/create-meeting", {
                 interviewerName,
                 interviewerEmail,
                 intervieweeName,
@@ -81,13 +81,13 @@ const HostMeeting = () => {
 
     const sendEmail = async (interviewerEmail, intervieweeEmail, meetingLink) => {
         try {
-            await axios.post("http://127.0.0.1:8000/api/auth/send-email", {
+            await axios.post("https://interview-map.vercel.app/api/auth/send-email", {
                 to: interviewerEmail,
                 subject: "Meeting Invitation",
                 text: `Hello ${interviewerName},\n\nYou are invited to a meeting. Here is the meeting link: ${meetingLink}\n\nYour Room ID: ${roomID}\nBest regards,\nInterviewer`
             });
 
-            await axios.post("http://127.0.0.1:8000/api/auth/send-email", {
+            await axios.post("https://interview-map.vercel.app/api/auth/send-email", {
                 to: intervieweeEmail,
                 subject: "Meeting Invitation",
                 text: `Hello ${intervieweeName},\n\nYou are invited to a meeting. Here is the meeting link: ${meetingLink}\n\nYour Room ID: ${roomID}\nBest regards,\nInterviewer`

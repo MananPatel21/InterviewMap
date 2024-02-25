@@ -27,7 +27,7 @@ const submitProblem = async (req, res) => {
         for (let i = 0; i < problem.testCases.length; i++) {
             const testCase = problem.testCases[i];
 
-            const compileResponse = await axios.post('http://localhost:8000/api/compile', {
+            const compileResponse = await axios.post('https://interview-map.vercel.app/api/compile', {
                 code: userCode,
                 language: userLang,
                 input: testCase.input

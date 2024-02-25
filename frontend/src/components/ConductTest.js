@@ -23,7 +23,7 @@ const ConductedTest = () => {
     useEffect(() => {
         const fetchTest = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/tests/${testId}`);
+                const response = await axios.get(`https://interview-map.vercel.app/api/tests/${testId}`);
                 setTest(response.data);
                 localStorage.setItem('time', response.data.time);
                 // Retrieve the predefined time limit from the database (assuming it's in seconds)

@@ -4,7 +4,7 @@ import Editor from '@monaco-editor/react';
 import CompilerNavbar from './CompilerNavbar';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:8000');
+const socket = io('https://interview-map.vercel.app');
 
 function Compiler() {
     const [userCode, setUserCode] = useState('');
@@ -39,7 +39,7 @@ function Compiler() {
             return;
         }
 
-        fetch('http://localhost:8000/api/compile', {
+        fetch('https://interview-map.vercel.app/api/compile', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

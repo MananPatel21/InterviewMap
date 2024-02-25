@@ -11,7 +11,7 @@ const JoinRoom = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // const response = await axios.post('http://127.0.0.1:8000/api/joinroom', { roomID });
+      // const response = await axios.post('https://interview-map.vercel.app/api/joinroom', { roomID });
       // setSuccess(response.data.message);
       window.location.href = '/meeting?roomID=' + roomID;
     } catch (err) {

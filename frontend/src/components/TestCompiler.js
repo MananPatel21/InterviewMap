@@ -26,7 +26,7 @@ function Compiler({ selectedProblemId }) {
             return;
         }
 
-        fetch('http://localhost:8000/api/compile', {
+        fetch('https://interview-map.vercel.app/api/compile', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ function Compiler({ selectedProblemId }) {
 
     const handleSubmitProblem = async () => {
         try {
-            const response = await axios.post(`http://localhost:8000/api/problems/submitproblem/${selectedProblemId}`, {
+            const response = await axios.post(`https://interview-map.vercel.app/api/problems/submitproblem/${selectedProblemId}`, {
                 userCode,
                 userLang
             });

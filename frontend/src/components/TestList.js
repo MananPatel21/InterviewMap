@@ -11,7 +11,7 @@ const TestList = () => {
     useEffect(() => {
         const fetchTests = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/tests');
+                const response = await axios.get('https://interview-map.vercel.app/api/tests');
                 setTests(response.data);
             } catch (error) {
                 console.error('Error fetching tests:', error);

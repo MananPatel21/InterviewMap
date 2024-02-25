@@ -48,7 +48,7 @@ function IntervieweeDashboard() {
         e.preventDefault();
         try {
             const response = await axios.get(
-                `http://localhost:8000/api/tests/checkTestId/${testId}`
+                `https://interview-map.vercel.app/api/tests/checkTestId/${testId}`
             );
             if (response.status == 201) {
                 // setSuccess(response.data.message);

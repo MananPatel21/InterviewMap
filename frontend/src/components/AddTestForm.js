@@ -12,7 +12,7 @@ const AddTestForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const test = await axios.post('http://localhost:8000/api/tests/add-test', {
+            const test = await axios.post('https://interview-map.vercel.app/api/tests/add-test', {
                 title,
                 description,
                 time
@@ -21,7 +21,7 @@ const AddTestForm = () => {
             const emailList = emails.split(',').map(email => email.trim());
             
             Promise.all(emailList.map(email => 
-                axios.post('http://localhost:8000/api/auth/send-email', {
+                axios.post('https://interview-map.vercel.app/api/auth/send-email', {
                     to: email,
                     subject: 'New Test Available',
                     text: `A new test "${title}" has been added: ${description}\n\nTest ID:${test.data._id}\n\nTime Interval: ${time/60} min`

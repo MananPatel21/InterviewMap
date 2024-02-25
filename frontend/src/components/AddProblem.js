@@ -27,7 +27,7 @@ const AddProblemForm = ({ onSubmit }) => {
         e.preventDefault();
         const testCases = testCaseInputs.map(({ input, output }) => ({ input, output }));
         try {
-            await axios.post(`http://localhost:8000/api/tests/${testId}/add-problem`, {
+            await axios.post(`https://interview-map.vercel.app/api/tests/${testId}/add-problem`, {
                 title,
                 description,
                 sampleInput,

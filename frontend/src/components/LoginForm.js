@@ -26,7 +26,7 @@ const LoginForm = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/auth/login', {
+      const response = await axios.post('https://interview-map.vercel.app/api/auth/login', {
         emailOrUsername: email,
         password,
       });
@@ -61,7 +61,7 @@ const LoginForm = () => {
 
   const handleVerifyOTP = async () => {
     try {
-      const user = await axios.post('http://127.0.0.1:8000/api/auth/verify-otp-login', {
+      const user = await axios.post('https://interview-map.vercel.app/api/auth/verify-otp-login', {
         email,
         otp,
       });

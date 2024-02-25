@@ -57,7 +57,7 @@ const RegisterForm = () => {
     setLoading(true);
 
     try {
-      await axios.post('http://127.0.0.1:8000/api/auth/register', {
+      await axios.post('https://interview-map.vercel.app/api/auth/register', {
         email: formData.email,
         username: formData.username,
         password: formData.password1,
@@ -96,7 +96,7 @@ const RegisterForm = () => {
 
   const handleRegister = async () => {
     try {
-      await axios.post('http://127.0.0.1:8000/api/auth/verify-otp-register', {
+      await axios.post('https://interview-map.vercel.app/api/auth/verify-otp-register', {
         email: formData.email,
         otp: formData.otp,
         firstName: formData.firstName,

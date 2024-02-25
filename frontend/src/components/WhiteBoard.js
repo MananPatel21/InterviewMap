@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "../assets/styles/Canvas.css";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:8000");
+const socket = io("https://interview-map.vercel.app");
 
 export default function Canvas() {
     const [isDrawing, setIsDrawing] = useState(false);
@@ -22,7 +22,7 @@ export default function Canvas() {
         canvas.height = window.innerHeight;
         canvas.width = window.innerWidth;
 
-        socketRef.current = io("http://localhost:8000");
+        socketRef.current = io("https://interview-map.vercel.app");
 
         // Listen for drawing events from other clients
         socketRef.current.on("drawing", async (data) => {

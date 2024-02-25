@@ -21,7 +21,7 @@ const app = express();
 const server = http.createServer(app);
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://interview-map-ejec.vercel.app',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,

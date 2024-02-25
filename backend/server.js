@@ -45,7 +45,7 @@ app.use('/api/meeting', meetingRouter);
 // Configure CORS for Socket.IO server
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: '*',
     methods: ['GET', 'POST'],
   },
 });
